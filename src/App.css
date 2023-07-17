@@ -1,0 +1,727 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Rubik+Iso&display=swap");
+:root {
+  --text1: #d9d9d9;
+  --text2: #3c4852;
+  --text3: #bebebe;
+  --text4: #ffffff;
+  --alertText: #de4313;
+  --disabled: #e7e7e7;
+  --success: #47ba68;
+  --success2: #d7eddd;
+  --danger1: #f77171;
+  --danger2: #ff0000;
+  --primary1: #0096ff;
+  --primary2: linear-gradient(224deg, #0048ff 0%, #0096ff 100%);
+  --alertFill: linear-gradient(
+    135deg,
+    rgba(222, 67, 19, 0.2) 0%,
+    rgba(222, 67, 19, 0.2) 0.75%,
+    rgba(254, 193, 99, 0.2) 100%
+  );
+  --alertBoarder: linear-gradient(
+    135deg,
+    #de4313 0%,
+    #de4313 0.75%,
+    #de4313 2.92%,
+    #de4414 6.37%,
+    #df4515 10.97%,
+    #df4816 16.59%,
+    #e04b18 23.1%,
+    #e1501b 30.37%,
+    #e3561f 38.27%,
+    #e55e24 46.66%,
+    #e7682b 55.41%,
+    #eb7533 64.39%,
+    #ee843c 73.47%,
+    #f39547 82.52%,
+    #f8a954 91.41%,
+    #fec163 100%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../src/assets//backGround.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blue {
+  color: var(--primary1);
+  font-family: roboto;
+}
+
+.font-w-600 {
+  font-weight: 600;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* ++++++++++++++++++++++++++++ NAVBAR ++++++++++++++++++++++++++++ */
+
+/* navabar container */
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 4.5rem;
+  padding: 0.2rem 5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  background-color: var(--text4);
+  color: var(--text2);
+  font-family: "Raleway", sans-serif;
+}
+
+/* logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* logo */
+.logo {
+  height: 2.375rem;
+}
+
+/* courses container */
+.courses-cont {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* courses title and login title*/
+.courses-cont > div,
+.login {
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+/* Join button */
+.join {
+  color: var(--text4);
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 3.25rem;
+  background: var(--primary2);
+  padding: 0.625rem 2.625rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.logo-container > svg,
+.courses-cont > svg {
+  cursor: pointer;
+}
+
+/* ++++++++++++++++++++++++++++ MAIN SECTION ++++++++++++++++++++++++++++ */
+
+.main {
+  /* height: 100vh; */
+
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  padding: 4.5rem 5.875rem;
+}
+
+/* Main lookup section */
+.main-lookup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  color: var(--text4);
+}
+
+/* The header */
+.header {
+  display: flex;
+  gap: 0.8rem;
+  height: 5.25rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: var(--text4);
+  font-family: "Raleway";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%; /* 70px */
+  letter-spacing: -0.56px;
+}
+
+/* second line of the heading */
+.headerSecond {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+/* The red cut on the price */
+.cut {
+  position: relative;
+  font-family: Roboto;
+}
+
+.cut::after {
+  border-radius: 24px;
+  content: "";
+  position: absolute;
+  left: 1.688rem;
+  bottom: 1.1rem;
+  width: 7.938rem;
+  height: 0.5rem;
+  background-color: var(--danger2);
+}
+
+/* The list after the header */
+
+.pointer {
+  display: flex;
+  height: 5.3rem;
+  align-items: center;
+  gap: 4rem;
+  align-self: stretch;
+  font-family: "Roboto";
+}
+
+.pointerIcon {
+  display: flex;
+  width: 4.25rem;
+  height: 4.25rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.point-icon-in {
+  width: 3.716rem;
+  height: 3.8rem;
+  flex-shrink: 0;
+}
+
+.pointerContent {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.96px;
+}
+
+/* ++++++++++++++++++++++++++++ FORM SECTION ++++++++++++++++++++++++++++ */
+
+/* Form body */
+
+.form {
+  display: flex;
+  width: 115%;
+  padding: 2rem 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  border-radius: 0.5rem;
+  background: var(--text4);
+  font-family: "Roboto";
+}
+
+/* Form 1, sign up and subscribe */
+.form-1 {
+  width: 100%;
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.form-1 > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-1-num {
+  color: var(--text4);
+  margin-left: 42%;
+  width: 2.375rem;
+  height: 2.375rem;
+  padding: 0.4433rem 0.6333rem 0.5067rem 0.6333rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  background-color: var(--primary1);
+  border-radius: 50%;
+}
+
+.form-1-cont {
+  color: var(--text2);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.16px;
+  margin-top: 0.375rem;
+}
+
+/* Form part 2 */
+
+.form-2 {
+  color: var(--text2);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 125%; /* 30.073px */
+}
+
+/* Form part 4 summary container */
+.summary-cont {
+  display: flex;
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: stretch;
+  border-top: 0.125rem solid var(--text3);
+  background: var(--text4);
+}
+
+.text-cont {
+  display: flex;
+  height: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  color: var(--text2);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+
+.sub-fees {
+  color: var(--text2);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.48px;
+}
+
+.alert-cont {
+  display: flex;
+  width: 115%;
+  padding: 0.75rem 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  border-radius: 0.5rem;
+  border: 0.125rem solid var(--danger1);
+  background: var(--alertFill);
+}
+
+.alert-header {
+  display: flex;
+  height: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.alert-header {
+  color: var(--alertText);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+.alert-offer-price {
+  color: var(--text2);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.48px;
+}
+
+.alert-body {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.alert-body-clock-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.alert-body-text {
+  color: var(--alertText);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+
+.pre-total-text {
+  color: var(--text2);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+.grand-total {
+  color: var(--text2);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.72px;
+}
+
+/* Form part 5 button container */
+.form-btn-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.secondary-btn {
+  background-color: var(--text4);
+  cursor: pointer;
+  display: flex;
+  height: 3.5rem;
+  padding: 0.625rem 2.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1 0 0;
+  border-radius: 0.5rem;
+  border: 0.125rem solid var(--danger1);
+  color: var(--danger1);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.primary-btn {
+  display: flex;
+  height: 3.5rem;
+  cursor: pointer;
+  padding: 0.625rem 2.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex: 1 0 0;
+  border-radius: 0.5rem;
+  background: var(--success);
+  color: var(--text4);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border: none;
+}
+
+/* part 6 razor pay  */
+.razor {
+  display: flex;
+  width: 7.5rem;
+  height: 2.668rem;
+  flex-shrink: 0;
+  align-self: start;
+  background: url("./assets/razor.png"), lightgray 50% / cover no-repeat;
+}
+
+/* Input container, section 3 in form  */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+.text-field {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: stretch;
+  border-radius: 0.25rem;
+  border: 0.125rem solid var(--text3);
+  cursor: pointer;
+}
+
+.text-cont-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.text-cont-3-1 {
+  color: var(--text2);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+.text-cont-3-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.top-text {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.top-text > :first-child {
+  color: var(--text3);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 120%; /* 12px */
+  display: flex;
+  width: 1.187rem;
+  height: 0.75rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.top-text > :last-child {
+  color: var(--text2);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+.bottom-text {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.bottom-text > :first-child {
+  color: var(--text2);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+}
+
+.bottom-text > :last-child {
+  display: flex;
+  width: 1.187rem;
+  height: 0.75rem;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text3);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 120%; /* 12px */
+}
+
+.recommended {
+  border: 0.125rem solid var(--success);
+  background: var(--success2);
+  position: relative;
+}
+
+.recommended::after {
+  content: "Recommended";
+  top: 0;
+  position: absolute;
+  left: 3.875rem;
+  display: flex;
+  padding: 0.1rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--text4);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 120%; /* 14.4px */
+  border-radius: 0px 0px 0.25rem 0.25rem;
+  background: var(--success);
+}
+
+.disabled {
+  border: 0.125rem solid var(--text3);
+  background: var(--disabled);
+  position: relative;
+  cursor: not-allowed;
+}
+
+.disabled::after {
+  display: flex;
+  content: "Offer expired";
+  top: 0;
+  padding: 0.1rem 2.9rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 0.25rem 0.25rem;
+  background: var(--danger1);
+  position: absolute;
+  left: 3.875rem;
+  color: var(--text4);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 12px */
+}
+
+.live-logp {
+  position: relative;
+  left: 0;
+}
+
+.logo-text {
+  position: absolute;
+}
+
+/* Media query to make the navbar responsive */
+
+/* Extra Small devices (up to 576px) */
+@media (max-width: 576px) {
+  .header {
+    gap: 0.8rem;
+    height: 1.25rem;
+
+    font-size: 1.5rem;
+  }
+
+  .cut::after {
+    left: 0.9rem;
+    bottom: 0.7rem;
+    width: 4.938rem;
+    height: 0.3rem;
+  }
+
+  .pointerIcon {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .pointer {
+    gap: 2rem;
+    height: 2rem;
+  }
+
+  .main {
+    padding: 0;
+    padding-left: 1rem;
+    margin-top: 3rem;
+  }
+
+  .pointerContent {
+    font-size: 1rem;
+  }
+
+  .form {
+    width: 95%;
+
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+/* Small devices (up to 768px) */
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 0.625rem;
+  }
+
+  .navbar {
+    padding: 0.3rem 0.625rem;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+/* Medium devices (up to 992px) */
+@media (max-width: 992px) {
+  .logo-container {
+    gap: 0.625rem;
+  }
+
+  .navbar {
+    padding: 0.3rem 0.625rem;
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+/* Large devices (up to 1200px) */
+@media (max-width: 1120px) {
+}
+
+/* Extra Large devices (above 1200px) */
+@media (min-width: 1600px) {
+  /* CSS rules specific to Large devices */
+}
